@@ -10,7 +10,8 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.betomorrow.steeringbehaviours.model.components.ActorComponent;
 import com.betomorrow.steeringbehaviours.model.entities.AIEntity;
-import com.betomorrow.steeringbehaviours.model.systems.AISystem;
+import com.betomorrow.steeringbehaviours.model.systems.MovingActorSystem;
+import com.betomorrow.steeringbehaviours.model.systems.SteeringSystem;
 
 public class AIScreen extends ScreenAdapter {
     private Stage stage;
@@ -30,7 +31,8 @@ public class AIScreen extends ScreenAdapter {
             }
         });
 
-        engine.addSystem(new AISystem());
+        engine.addSystem(new SteeringSystem());
+        engine.addSystem(new MovingActorSystem());
 
         stage = new Stage(new ScreenViewport());
         Gdx.input.setInputProcessor(stage);

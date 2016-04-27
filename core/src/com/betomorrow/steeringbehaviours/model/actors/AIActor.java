@@ -31,6 +31,11 @@ public class AIActor extends Actor {
         );
         renderer.end();
 
+        renderer.begin(ShapeRenderer.ShapeType.Line);
+        renderer.setColor(Color.RED);
+        renderer.line(0, 0, 0, getHeight() * 2);
+        renderer.end();
+
         batch.begin();
     }
 }
