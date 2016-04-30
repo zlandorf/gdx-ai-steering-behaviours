@@ -21,7 +21,7 @@ public class SteeringSystem extends IteratingSystem {
     @Override
     protected void processEntity(Entity entity, float deltaTime) {
         MobileComponent mobile = entity.getComponent(MobileComponent.class);
-        Vector2 steeringForce = mobile.heading.cpy().rotate(25 - random.nextInt(50)).scl(random.nextInt(500));
+        Vector2 steeringForce = mobile.heading.cpy().rotate(50 - random.nextInt(100)).scl(random.nextInt(500));
 
         Vector2 acceleration = steeringForce.scl(1 / mobile.mass);
         mobile.velocity.add(acceleration.scl(deltaTime));

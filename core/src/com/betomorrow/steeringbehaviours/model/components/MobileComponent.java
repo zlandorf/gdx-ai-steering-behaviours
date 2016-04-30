@@ -10,7 +10,7 @@ public class MobileComponent implements Component {
     public Vector2 heading;
     public Vector2 side;
 
-    public float maxSpeed = 1000;
+    public float maxSpeed = 100;
     public float maxForce = 100;
     public float maxTurnRate = 100;
 
