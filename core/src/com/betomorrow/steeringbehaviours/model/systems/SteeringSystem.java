@@ -8,11 +8,14 @@ import com.betomorrow.steeringbehaviours.model.components.MobileComponent;
 import com.betomorrow.steeringbehaviours.model.components.SteeringComponent;
 import com.betomorrow.steeringbehaviours.model.utils.VectorUtils;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.Random;
 
 public class SteeringSystem extends IteratingSystem {
     private Random random;
 
+    @Inject
     public SteeringSystem() {
         super(Family.one(SteeringComponent.class, MobileComponent.class).get());
         random = new Random();

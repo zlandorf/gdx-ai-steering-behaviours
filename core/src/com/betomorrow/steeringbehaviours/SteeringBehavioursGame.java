@@ -3,13 +3,13 @@ package com.betomorrow.steeringbehaviours;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.betomorrow.steeringbehaviours.model.screens.AIScreen;
+
 
 public class SteeringBehavioursGame extends Game {
 
     @Override
     public void create () {
-        setScreen(new AIScreen());
+        setScreen(DI.getGameComponent().aiScreen());
     }
 
     @Override
